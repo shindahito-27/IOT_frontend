@@ -6,7 +6,7 @@ const useFirebaseData = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    const dataRef = ref(db, "/sensor");
+    const dataRef = ref(db, "/");
 
     onValue(dataRef, (snapshot) => {
       const val = snapshot.val();
