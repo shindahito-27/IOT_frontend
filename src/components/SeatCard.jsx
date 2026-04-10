@@ -16,7 +16,7 @@ function SeatCard({ seat }) {
       <div className="tags">
         <span>H: {seat.humidity.toFixed(0)}%</span>
         <span>EMA: {seat.ema?.toFixed(1)}</span>
-        <span>N: {seat["percentage time noisy"] ?? seat.ema/4}%</span>
+        <span>N: {seat["percentage time noisy"] ?? (seat.ema/4).toFixed(1)}%</span>
       </div>
 
       {seat.isLive && <span className="badge">LIVE</span>}
