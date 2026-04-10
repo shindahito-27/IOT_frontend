@@ -5,7 +5,7 @@ function Dashboard({ data }) {
   if (!data) return <h2>Loading...</h2>;
 
   const seats = generateSeats(data);
-
+    console.log("Generated Seats:", seats); // ✅ Debugging log
   // stats
   const occupiedCount = seats.filter(s => s.occupied).length;
 
